@@ -1,0 +1,9 @@
+## Projeto ERP - Montink ##
+## Desenvolvido por Henrique Marcandier, em 18/07/2025 ##
+## Nesse projeto, foram desenvolvidas várias telas para que possam verificar que eu sei sim programar o que pediram. Contém um arquivo zip na raiz do projeto para que criem um banco de dados e importem esse arquivo .zip para ele. Aí é só verificar se o arquivo config/database.php está correto e testar o sistema. ##
+## Explicando o projeto ##
+## Este projeto contém as telas de produtos (que é a página inicial do projeto), cupons, pedidos, carrinho e finalização de compra. Já fiz todos os testes possíveis aqui, para que não gere nenhum erro aí pra vocês. Eu coloquei um sql anti injection nele, a verificação do cep em todas as telas que possui esse campo (carrinho e edição de pedido), além das opções de Novo, Edição, Exclusão, Compra de Produtos nas telas que possuem essa referência. ##
+## Ficou um projeto bem legal, em que eu utilizei o PHP puro pra fazer, com o bootstrap, mysqli, css, javascript ##
+## Espero que gostem. ##
+## Atenciosamente, ##
+## Henrique Marcandier ##
