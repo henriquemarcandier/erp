@@ -1,9 +1,35 @@
-## Projeto ERP - Montink ##
-## Desenvolvido por Henrique Marcandier, em 18/07/2025 ##
-## Nesse projeto, foram desenvolvidas várias telas para que possam verificar que eu sei sim programar o que pediram. Contém um arquivo zip na raiz do projeto para que criem um banco de dados e importem esse arquivo .zip para ele. Aí é só verificar se o arquivo config/database.php está correto e testar o sistema. ##
-## Explicando o projeto ##
-## Este projeto contém as telas de produtos (que é a página inicial do projeto), cupons, pedidos, carrinho e finalização de compra. Já fiz todos os testes possíveis aqui, para que não gere nenhum erro aí pra vocês. Eu coloquei um sql anti injection nele, a verificação do cep em todas as telas que possui esse campo (carrinho e edição de pedido), além das opções de Novo, Edição, Exclusão, Compra de Produtos nas telas que possuem essa referência. ##
-## Ficou um projeto bem legal, em que eu utilizei o PHP puro pra fazer, com o bootstrap, mysqli, css, javascript ##
-## Espero que gostem. ##
-## Atenciosamente, ##
-## Henrique Marcandier ##
+Projeto ERP - Montink
+Desenvolvido por Henrique Marcandier – 18/07/2025
+
+Este projeto foi desenvolvido com o objetivo de demonstrar, de forma prática, que possuo total capacidade de atender aos requisitos técnicos propostos.
+
+O sistema contempla múltiplas telas funcionais, incluindo: Produtos (página inicial), Cupons, Pedidos, Carrinho e Finalização de Compra — todas desenvolvidas em PHP puro, utilizando Bootstrap, MySQLi, JavaScript e boas práticas de organização em MVC.
+
+Na raiz do projeto há um arquivo .zip com o banco de dados. Basta importá-lo e configurar corretamente o arquivo config/database.php para começar os testes.
+Funcionalidades implementadas:
+
+    Cadastro, edição e exclusão de produtos com variações e controle de estoque por variação
+
+    Sistema de cupons com regras de valor mínimo e validade
+
+    Carrinho de compras com regras de frete por subtotal
+
+    Consulta automática de CEP via ViaCEP (disponível no carrinho e na edição de pedidos)
+
+    Finalização do pedido com envio de e-mail
+
+    Integração de webhook para atualização e cancelamento de pedidos
+
+    Proteção contra SQL Injection com uso de prepare() e bind_param()
+
+    Interface responsiva com Bootstrap
+
+    Cabeçalho de navegação e rodapé com link para um modal de apresentação pessoal
+
+No rodapé do sistema, ao clicar em Henrique Marcandier, um modal é exibido com informações sobre mim, incluindo foto, breve apresentação e links de contato (e-mail, telefone e WhatsApp).
+
+Esse foi um projeto muito legal de construir, feito com atenção aos detalhes, testes em todas as rotas e foco em entregar exatamente o que foi solicitado — e um pouco mais.
+
+Espero que gostem!
+Com apreço,
+Henrique Marcandier
