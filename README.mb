@@ -10,6 +10,8 @@ Funcionalidades implementadas:
 
     Cadastro, edição e exclusão de produtos com variações e controle de estoque por variação
 
+    Cadastro, edição e exclusão de cupons de desconto, que só pode ser usado se o valor da compra for maior ou igual ao valor do desconto
+
     Sistema de cupons com regras de valor mínimo e validade
 
     Carrinho de compras com regras de frete por subtotal
