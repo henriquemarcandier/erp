@@ -30,6 +30,7 @@
       $frete = ($subtotal >= 52 && $subtotal <= 166.59) ? 15 : (($subtotal > 200) ? 0 : 20);
       $desconto = $_SESSION['valor_desconto'] ?? 0;
       $total = $subtotal + $frete - $desconto;
+      $total = ($total > 0) ? $total : 0;
     ?>
     <p><strong>Subtotal:</strong> R$ <?= number_format($subtotal, 2, ',', '.') ?></p>
     <p><strong>Frete:</strong> R$ <?= number_format($frete, 2, ',', '.') ?></p>

@@ -62,6 +62,7 @@ function finalizarPedido() {
         $frete = ($subtotal >= 52 && $subtotal <= 166.59) ? 15 : (($subtotal > 200) ? 0 : 20);
         $desconto = $_SESSION['valor_desconto'] ?? 0;
         $total = $subtotal + $frete - $desconto;
+        $total = ($total > 0) ? $total : 0;
         $stmt = $conn->prepare("INSERT INTO pedidos (valor_total, frete, cep, endereco, email_cliente) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("ddsss", $total, $frete, $cep, $endereco, $email);
         $stmt->execute();
