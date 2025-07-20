@@ -4,8 +4,9 @@
   <p><strong>Cliente:</strong> <?= htmlspecialchars($pedido['email_cliente']) ?></p>
   <p><strong>CEP:</strong> <?= htmlspecialchars($pedido['cep']) ?></p>
   <p><strong>Endereço:</strong> <?= htmlspecialchars($pedido['endereco']) ?></p>
-  <p><strong>Valor Total:</strong> R$ <?= number_format($pedido['valor_total'], 2, ',', '.') ?></p>
+  <p><strong>Valor Total:</strong> R$ <?= number_format($pedido['total'], 2, ',', '.') ?></p>
   <p><strong>Frete:</strong> R$ <?= number_format($pedido['frete'], 2, ',', '.') ?></p>
+  <p><strong>Desconto:</strong> R$ <?= number_format($pedido['desconto'], 2, ',', '.') ?></p>
   <p><strong>Status:</strong> <?= htmlspecialchars($pedido['status'] ?? 'Pendente') ?></p>
   <h5>Itens:</h5>
   <table class="table table-bordered">

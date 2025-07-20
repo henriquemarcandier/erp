@@ -19,7 +19,7 @@
       <tr>
         <td><?= $pedido['id'] ?></td>
         <td><?= htmlspecialchars($pedido['email_cliente']) ?></td>
-        <td><?= number_format($pedido['valor_total'], 2, ',', '.') ?></td>
+        <td><?= number_format($pedido['total'], 2, ',', '.') ?></td>
         <td><?= number_format($pedido['frete'], 2, ',', '.') ?></td>
         <td><?= htmlspecialchars($pedido['cep']) ?></td>
         <td><?= htmlspecialchars($pedido['status'] ?? 'Pendente') ?></td>
