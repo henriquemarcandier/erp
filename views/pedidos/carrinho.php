@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../layout/header.php';?>
+<?php include __DIR__ . '/../layout/header.php'; ?>
 <div class="container mt-4">
   <h3>Carrinho de Compras</h3>
   <?php if (empty($_SESSION['carrinho'])): ?>

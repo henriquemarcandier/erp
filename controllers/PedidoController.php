@@ -51,6 +51,7 @@ function removerItemCarrinho() {
 function finalizarPedido() {
     global $conn;
     if (isset($_SESSION['carrinho'])){
+
         $cep = $_POST['cep'];
         $endereco = $_POST['endereco'];
         $email = $_POST['email'];
@@ -61,12 +62,10 @@ function finalizarPedido() {
         }
         $frete = ($subtotal >= 52 && $subtotal <= 166.59) ? 15 : (($subtotal > 200) ? 0 : 20);
         $desconto = $_SESSION['valor_desconto'] ?? 0;
-        $cod_desconto = $_SESSION['cupom_aplicado'] ?? '';
+        $codCupom = $_SESSION['cupom_aplicado'] ?? '';
         $total = $subtotal + $frete - $desconto;
         $total = ($total > 0) ? $total : 0;
-        $sql = "INSERT INTO pedidos (cep, endereco, email_cliente, total, frete, desconto, cod_desconto) 
-                VALUES ('$cep', '$endereco', '$email', '".$total."', '".$frete."', '".$desconto."', '".$cod_desconto."')";
-        $conn->query($sql);
+        $stmt = $conn->query("INSERT INTO pedidos (subtotal, frete, desconto, total, cep, endereco, email_cliente, cupom_aplicado) VALUES ('".$subtotal."', '".$frete."', '".$desconto."', '".$total."', '".$cep."', '".$endereco."', '".$email."', '".$codCupom."')");
         $pedido_id = $conn->insert_id;
         foreach ($carrinho as $item) {
             $id = $item['id'];

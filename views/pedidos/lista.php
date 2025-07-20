@@ -6,8 +6,10 @@
       <tr>
         <th>ID</th>
         <th>Cliente (E-mail)</th>
-        <th>Valor Total (R$)</th>
+        <th>Subtotal (R$)</th>
         <th>Frete (R$)</th>
+        <th>Desconto (R$)</th>
+        <th>Valor Total (R$)</th>
         <th>CEP</th>
         <th>Status</th>
         <th>Data</th>
@@ -19,8 +21,10 @@
       <tr>
         <td><?= $pedido['id'] ?></td>
         <td><?= htmlspecialchars($pedido['email_cliente']) ?></td>
-        <td><?= number_format($pedido['total'], 2, ',', '.') ?></td>
+        <td><?= number_format($pedido['subtotal'], 2, ',', '.') ?></td>
         <td><?= number_format($pedido['frete'], 2, ',', '.') ?></td>
+        <td><?= number_format($pedido['desconto'], 2, ',', '.') ?></td>
+        <td><?= number_format($pedido['total'], 2, ',', '.') ?></td>
         <td><?= htmlspecialchars($pedido['cep']) ?></td>
         <td><?= htmlspecialchars($pedido['status'] ?? 'Pendente') ?></td>
         <td><?= date('d/m/Y H:i', strtotime($pedido['criado_em'] ?? $pedido['data'])) ?></td>
