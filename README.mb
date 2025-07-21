@@ -5,7 +5,8 @@ Este projeto foi desenvolvido com o objetivo de demonstrar, de forma prática, q
 
 O sistema contempla múltiplas telas funcionais, incluindo: Produtos (página inicial), Cupons, Pedidos, Carrinho e Finalização de Compra — todas desenvolvidas em PHP puro, utilizando Bootstrap, MySQLi, JavaScript e boas práticas de organização em MVC.
 
-Na raiz do projeto há um arquivo 'teste.sql' com o banco de dados. Basta importá-lo e configurar corretamente o arquivo config/database.php para começar os testes.
+Na raiz do projeto há um arquivo 'teste.sql' com o banco de dados. Basta criar a base de dados, importar o arquivo 'teste.sql' para ela e configurar corretamente o arquivo config/database.php para começar os testes.
+
 Funcionalidades implementadas:
 
     Cadastro, edição e exclusão de produtos com variações e controle de estoque por variação
