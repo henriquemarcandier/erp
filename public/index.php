@@ -19,10 +19,10 @@ switch ($url) {
     case 'carrinho/remover': removerItemCarrinho(); break;
     case 'pedido/finalizar': finalizarPedido(); break;
     case 'pedidos': listarPedidos(); break;
-    case 'pedido/detalhes': detalhesPedido(); break;
-    case 'pedido/editar': editarPedido(); break;
+    case 'pedidos/detalhes': detalhesPedido(); break;
+    case 'pedidos/editar': editarPedido(); break;
     case 'pedidos/atualizar': atualizarPedido(); break;
-    case 'pedido/excluir': excluirPedido(); break;
+    case 'pedidos/excluir': excluirPedido(); break;
     case 'cupons': listarCupons(); break;
     case 'cupons/novo': novoCupom(); break;
     case 'cupons/salvar': salvarCupom(); break;

@@ -18,13 +18,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link<?php if (preg_match("/produto/", $_GET['url'])){?> active<?php }?>" href="?url=produtos">Produtos</a>
+            <a class="nav-link<?php if (preg_match("/produtos/", $_GET['url'])){?> active<?php }?>" href="?url=produtos">Produtos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link<?php if (preg_match("/cupo/", $_GET['url'])){?> active<?php }?>" href="?url=cupons"<?php if (preg_match("/cupo/", $_GET['url'])){?> active<?php }?>>Cupons</a>
+            <a class="nav-link<?php if (preg_match("/cupons/", $_GET['url'])){?> active<?php }?>" href="?url=cupons"<?php if (preg_match("/cupo/", $_GET['url'])){?> active<?php }?>>Cupons</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link<?php if (preg_match("/pedido/", $_GET['url'])){?> active<?php }?>" href="?url=pedidos">Pedidos</a>
+            <a class="nav-link<?php if (preg_match("/pedidos/", $_GET['url'])){?> active<?php }?>" href="?url=pedidos">Pedidos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link<?php if (preg_match("/carrinho/", $_GET['url'])){?> active<?php }?>" href="?url=carrinho">Carrinho</a>

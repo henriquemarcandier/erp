@@ -60,8 +60,8 @@
         <td><?= htmlspecialchars($pedido['cep']) ?></td>
         <td><?= htmlspecialchars($pedido['status'] ?? 'Pendente') ?></td>
         <td><?= date('d/m/Y H:i', strtotime($pedido['criado_em'] ?? $pedido['data'])) ?></td>
-        <td><a href="?url=pedido/editar&id=<?= $pedido['id'] ?>" class="btn btn-sm btn-success">Editar</a> <a href="?url=pedido/detalhes&id=<?= $pedido['id'] ?>" class="btn btn-sm btn-primary">Detalhes</a>
-        <a href="?url=pedido/excluir&id=<?= $pedido['id'] ?>" 
+        <td><a href="?url=pedidos/editar&id=<?= $pedido['id'] ?>" class="btn btn-sm btn-success">Editar</a> <a href="?url=pedidos/detalhes&id=<?= $pedido['id'] ?>" class="btn btn-sm btn-primary">Detalhes</a>
+        <a href="?url=pedidos/excluir&id=<?= $pedido['id'] ?>" 
         class="btn btn-sm btn-danger"
         onclick="return confirm('Tem certeza que deseja excluir este pedido?');">
         Excluir
