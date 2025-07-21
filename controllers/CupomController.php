@@ -3,17 +3,17 @@ require_once __DIR__ . '/../config/database.php';
 
 function listarCupons() {
     global $conn;
-    $codigo = trim($_REQUEST['codigo']);
-    $codigo = $conn->real_escape_string($codigo);
-    $validade = trim($_REQUEST['validade']);
-    $validade = $conn->real_escape_string($validade);
+    $codigo = $_GET['codigo'] ?? '';;
+    $validade = $_GET['validade'] ?? '';;
     $sql = "SELECT * FROM cupons ";
     if ($codigo || $validade) {
         $sql .= "WHERE 1=1 ";
         if ($codigo) {
+            $codigo = $conn->real_escape_string($codigo);
             $sql .= "AND codigo LIKE '%$codigo%' ";
         }
         if ($validade) {
+            $validade = $conn->real_escape_string($validade);
             $sql .= "AND validade = '$validade' ";
         }
     }
