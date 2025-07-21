@@ -14,6 +14,7 @@ switch ($url) {
     case 'produtos/comprar': comprarProduto(); break;
     case 'produtos/editar': editarProduto(); break;
     case 'produtos/atualizar': atualizarProduto(); break;
+    case 'produtos/excluir': excluirProduto(); break;
     case 'carrinho': verCarrinho(); break;
     case 'carrinho/remover': removerItemCarrinho(); break;
     case 'pedido/finalizar': finalizarPedido(); break;

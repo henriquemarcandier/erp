@@ -28,7 +28,7 @@
           <td><?= $p['id'] ?></td>
           <td><?= $p['nome'] ?></td>
           <td>R$ <?= number_format($p['preco'], 2, ',', '.') ?></td>
-          <td><a href="?url=produtos/comprar&id=<?= $p['id'] ?>" class="btn btn-sm btn-primary">Comprar</a> <a href="?url=produtos/editar&id=<?= $p['id'] ?>" class="btn btn-sm btn-success">Editar</a> <a href="?url=produtos/excluir&id=<?= $produto['id'] ?>" 
+          <td><a href="?url=produtos/comprar&id=<?= $p['id'] ?>" class="btn btn-sm btn-primary">Comprar</a> <a href="?url=produtos/editar&id=<?= $p['id'] ?>" class="btn btn-sm btn-success">Editar</a> <a href="?url=produtos/excluir&id=<?= $p['id'] ?>" 
    class="btn btn-sm btn-danger" 
    onclick="return confirm('Tem certeza que deseja excluir este produto?')">
    Excluir
