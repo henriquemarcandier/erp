@@ -32,5 +32,14 @@ No rodapé do sistema, ao clicar em Henrique Marcandier, um modal é exibido com
 Esse foi um projeto muito legal de construir, feito com atenção aos detalhes, testes em todas as rotas e foco em entregar exatamente o que foi solicitado — e um pouco mais.
 
 Espero que gostem!
+
+🧪 *Observação importante:*
+O arquivo `teste.sql` já contém dados de exemplo pré-carregados no banco, incluindo:
+- Pedidos simulados
+- Produtos com variações
+- Cupons de desconto válidos
+Esses dados servem exclusivamente para fins de teste e demonstração do sistema ERP.
+
+
 Com apreço,
 Henrique Marcandier
