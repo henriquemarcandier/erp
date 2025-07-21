@@ -106,15 +106,16 @@ function listarPedidos() {
             $status = $conn->real_escape_string($status);
             $sql .= " AND status = '$status'";
         }
-        if ($dataInicial) {
-            $dataInicial = $conn->real_escape_string($dataInicial);
-            $sql .= " AND criado_em LIKE '%$dataInicial%'";
+        if ($dataInicial && $dataFinal){
+            if ($dataInicial) {
+                $dataInicial = $conn->real_escape_string($dataInicial);
+                $sql .= " AND criado_em >= '$dataInicial 00:00:00'";
+            }
+            if ($dataFinal) {
+                $dataFinal = $conn->real_escape_string($dataFinal);
+                $sql .= " AND criado_em <= '$dataFinal 23:59:59'";
+            }
         }
-        if ($dataFinal) {
-            $dataFinal = $conn->real_escape_string($dataFinal);
-            $sql .= " AND criado_em LIKE '%$dataFinal%'";
-        }
-        
     }
     $sql .= " ORDER BY id DESC";
     $res = $conn->query($sql);
