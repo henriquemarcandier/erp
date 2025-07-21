@@ -14,7 +14,7 @@
         <select name="status" id="status" class="form-control ml-2">
           <option value="">Todos</option>
           <option value="Pendente" <?= isset($_GET['status']) && $_GET['status'] == 'Pendente' ? 'selected' : '' ?>>Pendente</option>
-          <option value="Pago" <?= isset($_GET['status']) && $_GET['status'] == 'Pago' ? 'selected' : '' ?>>Pago</option>
+          <option value="Processando" <?= isset($_GET['status']) && $_GET['status'] == 'Processando' ? 'selected' : '' ?>>Processando</option>
           <option value="Enviado" <?= isset($_GET['status']) && $_GET['status'] == 'Enviado' ? 'selected' : '' ?>>Enviado</option>
           <option value="Cancelado" <?= isset($_GET['status']) && $_GET['status'] == 'Cancelado' ? 'selected' : '' ?>>Cancelado</option>
           <option value="Concluído" <?= isset($_GET['status']) && $_GET['status'] == 'Concluído' ? 'selected' : '' ?>>Concluído</option>
