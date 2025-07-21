@@ -92,7 +92,32 @@ function finalizarPedido() {
 // Função para listar todos os pedidos
 function listarPedidos() {
     global $conn;
-    $res = $conn->query("SELECT * FROM pedidos ORDER BY id DESC");
+    $sql = "SELECT * FROM pedidos WHERE 1=1";
+    if (isset($_GET['email']) || isset($_GET['status']) || isset($_GET['data_inicial']) || isset($_GET['data_final'])) {
+        $email = $_GET['email'] ?? '';
+        $status = $_GET['status'] ?? '';
+        $dataInicial = $_GET['data_inicial'] ?? '';
+        $dataFinal = $_GET['data_final'] ?? '';
+        if ($email) {
+            $email = $conn->real_escape_string($email);
+            $sql .= " AND email_cliente = '$email'";
+        }
+        if ($status) {
+            $status = $conn->real_escape_string($status);
+            $sql .= " AND status = '$status'";
+        }
+        if ($dataInicial) {
+            $dataInicial = $conn->real_escape_string($dataInicial);
+            $sql .= " AND criado_em LIKE '%$dataInicial%'";
+        }
+        if ($dataFinal) {
+            $dataFinal = $conn->real_escape_string($dataFinal);
+            $sql .= " AND criado_em LIKE '%$dataFinal%'";
+        }
+        
+    }
+    $sql .= " ORDER BY id DESC";
+    $res = $conn->query($sql);
     $pedidos = $res->fetch_all(MYSQLI_ASSOC);
     include __DIR__ . '/../views/pedidos/lista.php';
 }
