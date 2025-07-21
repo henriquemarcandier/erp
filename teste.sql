@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2025-07-20 18:52:09
+Date: 2025-07-20 21:31:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -51,9 +51,9 @@ CREATE TABLE `estoque` (
 -- ----------------------------
 -- Records of estoque
 -- ----------------------------
-INSERT INTO `estoque` VALUES ('1', '1', '999997');
+INSERT INTO `estoque` VALUES ('1', '1', '999996');
 INSERT INTO `estoque` VALUES ('2', '2', '999998');
-INSERT INTO `estoque` VALUES ('3', '3', '999997');
+INSERT INTO `estoque` VALUES ('3', '3', '999998');
 
 -- ----------------------------
 -- Table structure for `pedido_itens`
@@ -66,7 +66,7 @@ CREATE TABLE `pedido_itens` (
   `quantidade` int(11) NOT NULL,
   `preco_unitario` decimal(10,2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of pedido_itens
@@ -76,6 +76,11 @@ INSERT INTO `pedido_itens` VALUES ('2', '2', '2', '1', '149.00');
 INSERT INTO `pedido_itens` VALUES ('3', '3', '3', '1', '50.00');
 INSERT INTO `pedido_itens` VALUES ('4', '4', '3', '1', '50.00');
 INSERT INTO `pedido_itens` VALUES ('5', '5', '1', '1', '500.00');
+INSERT INTO `pedido_itens` VALUES ('6', '6', '1', '1', '500.00');
+INSERT INTO `pedido_itens` VALUES ('7', '6', '2', '1', '149.00');
+INSERT INTO `pedido_itens` VALUES ('8', '6', '3', '1', '50.00');
+INSERT INTO `pedido_itens` VALUES ('9', '7', '1', '1', '500.00');
+INSERT INTO `pedido_itens` VALUES ('10', '8', '1', '1', '500.00');
 
 -- ----------------------------
 -- Table structure for `pedidos`
@@ -95,7 +100,7 @@ CREATE TABLE `pedidos` (
   `total` decimal(10,2) NOT NULL DEFAULT 0.00,
   `criado_em` datetime DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of pedidos
@@ -105,6 +110,9 @@ INSERT INTO `pedidos` VALUES ('2', '', 'henrique.marcandier@gmail.com', '3042110
 INSERT INTO `pedidos` VALUES ('3', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '', '50.00', '20.00', '0.00', '70.00', '2025-07-20 18:15:29');
 INSERT INTO `pedidos` VALUES ('4', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '', '50.00', '20.00', '0.00', '70.00', '2025-07-20 18:16:22');
 INSERT INTO `pedidos` VALUES ('5', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '321-LOJA-123', '500.00', '0.00', '300.00', '200.00', '2025-07-20 18:49:34');
+INSERT INTO `pedidos` VALUES ('6', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '321-LOJA-123', '699.00', '0.00', '300.00', '399.00', '2025-07-20 21:19:53');
+INSERT INTO `pedidos` VALUES ('7', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '', '500.00', '0.00', '0.00', '500.00', '2025-07-20 21:22:34');
+INSERT INTO `pedidos` VALUES ('8', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '321-LOJA-123', '500.00', '0.00', '300.00', '200.00', '2025-07-20 21:24:45');
 
 -- ----------------------------
 -- Table structure for `produtos`
