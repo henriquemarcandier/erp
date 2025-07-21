@@ -25,9 +25,9 @@
             <p>Este projeto de mini ERP foi desenvolvido com o objetivo de controlar pedidos, cupons, produtos e estoque de forma objetiva e organizada, usando PHP, MySQL e Bootstrap. Busco sempre alinhar simplicidade com eficiência.</p>
             <p>Tenho interesse em evoluir como desenvolvedor fullstack, trabalhando com APIs, frameworks modernos, e arquitetura limpa. Adoro desafios que envolvam lógica, refatoração e usabilidade.</p>
             <p>Se quiser me conhecer melhor, acompanhar meu progresso ou colaborar, sinta-se à vontade para entrar em contato. Estou aberto a novas oportunidades e projetos!</p>
-            <p>Email: <a href="mailto:henrique.marcandier@gmail.com">henrique.marcandier@gmail.com</a></p>
-            <p>Telefone: <a href="tel:+5531998466628">(31) 99846-6628</a></p>
-            <p>WhatsApp: <a href="https://api.whatsapp.com/send?l=pt&phone=5531998466628" target="_blank">Clique aqui</a></p>
+            <p><a href="mailto:henrique.marcandier@gmail.com"><i class="bi bi-envelope" title="Enviar Email para henrique.marcandier@gmail.com"></i></a> 
+            <a href="tel:+5531998466628"><i class="bi bi-telephone" title="Ligar para (31) 99846-6628"></i></a>
+            <a href="https://api.whatsapp.com/send?l=pt&phone=5531998466628" target="_blank"><i class="bi bi-whatsapp" title="Entrar em contato via whatsapp (31) 99846-6628"></i></a></p>
           </div>
         </div>
       </div>
