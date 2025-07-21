@@ -1,3 +1,4 @@
+<?php $_GET['url'] = (isset($_GET['url'])) ? $_GET['url'] : "produtos";?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
