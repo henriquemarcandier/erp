@@ -2,6 +2,22 @@
 <div class="container mt-4">
   <h3>Produtos</h3>
   <a href="?url=produtos/novo" class="btn btn-primary mb-3">Novo Produto</a>
+  <a href="#" class="btn btn-success mb-3" onclick="if (document.getElementById('filtrar').style.display == 'none'){ document.getElementById('filtrar').style.display='block'; } else{ document.getElementById('filtrar').style.display='none'; }">Filtrar</a>
+  <div id="filtrar" style="display: none;">
+    <form action="?url=produtos/listar" method="get" class="form-inline mb-3">
+      <input type="hidden" name="url" value="produtos/listar">
+      <div class="form-group mr-2">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" class="form-control ml-2" value="<?= isset($_GET['nome']) ? htmlspecialchars($_GET['nome']) : '' ?>">
+      </div>
+      <div class="form-group mr-2">
+        <label for="preco">Preço:</label>
+        <input type="number" step="0.01" name="preco" id="preco" class="form-control ml-2" value="<?= isset($_GET['preco']) ? htmlspecialchars($_GET['preco']) : '' ?>">
+      </div>
+      <button type="submit" class="btn btn-primary">Filtrar</button>
+      <a href="?url=produtos/listar" class="btn btn-secondary ml-2">Fechar</a>
+    </form>
+  </div>
   <table class="table table-bordered">
     <thead>
       <tr><th>ID</th><th>Nome</th><th>Preço</th><th>Ação</th></tr>

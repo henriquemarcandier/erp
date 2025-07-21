@@ -4,7 +4,20 @@ require_once __DIR__ . '/../config/database.php';
 class Produto {
     public static function listar() {
         global $conn;
-        $res = $conn->query("SELECT * FROM produtos");
+        $sql = "SELECT * FROM produtos";
+        if (isset($_GET['nome']) || isset($_GET['preco'])) {
+            $nome = $_GET['nome'] ?? '';
+            $preco = $_GET['preco'] ?? '';
+            $sql .= " WHERE 1=1";
+            if ($nome) {
+                $sql .= " AND nome LIKE '%" . $conn->real_escape_string($nome) . "%'";
+            }
+            if ($preco) {
+                $sql .= " AND preco = " . floatval($preco);
+            }
+        }
+        $sql .= " ORDER BY id DESC";
+        $res = $conn->query($sql);
         return $res->fetch_all(MYSQLI_ASSOC);
     }
 

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2025-07-20 21:37:45
+Date: 2025-07-20 21:31:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -46,15 +46,14 @@ CREATE TABLE `estoque` (
   `variacao_id` int(11) NOT NULL,
   `quantidade` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of estoque
 -- ----------------------------
-INSERT INTO `estoque` VALUES ('1', '1', '999995');
-INSERT INTO `estoque` VALUES ('2', '2', '999997');
-INSERT INTO `estoque` VALUES ('3', '3', '999997');
-INSERT INTO `estoque` VALUES ('4', '4', '999998');
+INSERT INTO `estoque` VALUES ('1', '1', '999996');
+INSERT INTO `estoque` VALUES ('2', '2', '999998');
+INSERT INTO `estoque` VALUES ('3', '3', '999998');
 
 -- ----------------------------
 -- Table structure for `pedido_itens`
@@ -67,7 +66,7 @@ CREATE TABLE `pedido_itens` (
   `quantidade` int(11) NOT NULL,
   `preco_unitario` decimal(10,2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of pedido_itens
@@ -82,10 +81,6 @@ INSERT INTO `pedido_itens` VALUES ('7', '6', '2', '1', '149.00');
 INSERT INTO `pedido_itens` VALUES ('8', '6', '3', '1', '50.00');
 INSERT INTO `pedido_itens` VALUES ('9', '7', '1', '1', '500.00');
 INSERT INTO `pedido_itens` VALUES ('10', '8', '1', '1', '500.00');
-INSERT INTO `pedido_itens` VALUES ('11', '9', '1', '1', '500.00');
-INSERT INTO `pedido_itens` VALUES ('12', '10', '3', '1', '50.00');
-INSERT INTO `pedido_itens` VALUES ('13', '10', '2', '1', '149.00');
-INSERT INTO `pedido_itens` VALUES ('14', '11', '4', '1', '400.00');
 
 -- ----------------------------
 -- Table structure for `pedidos`
@@ -105,7 +100,7 @@ CREATE TABLE `pedidos` (
   `total` decimal(10,2) NOT NULL DEFAULT 0.00,
   `criado_em` datetime DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of pedidos
@@ -118,9 +113,6 @@ INSERT INTO `pedidos` VALUES ('5', '', 'henrique.marcandier@gmail.com', '3042110
 INSERT INTO `pedidos` VALUES ('6', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '321-LOJA-123', '699.00', '0.00', '300.00', '399.00', '2025-07-20 21:19:53');
 INSERT INTO `pedidos` VALUES ('7', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '', '500.00', '0.00', '0.00', '500.00', '2025-07-20 21:22:34');
 INSERT INTO `pedidos` VALUES ('8', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '321-LOJA-123', '500.00', '0.00', '300.00', '200.00', '2025-07-20 21:24:45');
-INSERT INTO `pedidos` VALUES ('9', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '321-LOJA-123', '500.00', '0.00', '300.00', '200.00', '2025-07-20 21:33:59');
-INSERT INTO `pedidos` VALUES ('10', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Concluído', '321-LOJA-123', '199.00', '20.00', '300.00', '0.00', '2025-07-20 21:34:48');
-INSERT INTO `pedidos` VALUES ('11', '', 'henrique.marcandier@gmail.com', '30421108', 'Rua Geraldo Bicalho, Nova Suíssa, Belo Horizonte - MG', 'Pendente', '', '400.00', '0.00', '0.00', '400.00', '2025-07-20 21:36:48');
 
 -- ----------------------------
 -- Table structure for `produtos`
@@ -134,7 +126,7 @@ CREATE TABLE `produtos` (
   `ativo` tinyint(1) DEFAULT 1,
   `criado_em` datetime DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of produtos
@@ -142,7 +134,6 @@ CREATE TABLE `produtos` (
 INSERT INTO `produtos` VALUES ('1', 'Teste', null, '500.00', '1', '2025-07-20 18:05:32');
 INSERT INTO `produtos` VALUES ('2', 'Teste2', null, '149.00', '1', '2025-07-20 18:05:59');
 INSERT INTO `produtos` VALUES ('3', 'Teste3', null, '50.00', '1', '2025-07-20 18:06:20');
-INSERT INTO `produtos` VALUES ('4', 'Teste4', null, '400.00', '1', '2025-07-20 21:36:30');
 
 -- ----------------------------
 -- Table structure for `variacoes`
@@ -154,7 +145,7 @@ CREATE TABLE `variacoes` (
   `nome` varchar(100) NOT NULL,
   `preco` decimal(10,2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of variacoes
@@ -162,4 +153,3 @@ CREATE TABLE `variacoes` (
 INSERT INTO `variacoes` VALUES ('1', '1', 'Téste', '0.00');
 INSERT INTO `variacoes` VALUES ('2', '2', 'Preto', '0.00');
 INSERT INTO `variacoes` VALUES ('3', '3', 'Vermelho', '0.00');
-INSERT INTO `variacoes` VALUES ('4', '4', 'Nenhum', '0.00');

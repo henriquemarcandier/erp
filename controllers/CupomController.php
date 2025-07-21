@@ -3,7 +3,22 @@ require_once __DIR__ . '/../config/database.php';
 
 function listarCupons() {
     global $conn;
-    $res = $conn->query("SELECT * FROM cupons ORDER BY validade DESC");
+    $codigo = trim($_REQUEST['codigo']);
+    $codigo = $conn->real_escape_string($codigo);
+    $validade = trim($_REQUEST['validade']);
+    $validade = $conn->real_escape_string($validade);
+    $sql = "SELECT * FROM cupons ";
+    if ($codigo || $validade) {
+        $sql .= "WHERE 1=1 ";
+        if ($codigo) {
+            $sql .= "AND codigo LIKE '%$codigo%' ";
+        }
+        if ($validade) {
+            $sql .= "AND validade = '$validade' ";
+        }
+    }
+    $sql .= "ORDER BY validade DESC";
+    $res = $conn->query($sql);
     $cupons = $res->fetch_all(MYSQLI_ASSOC);
     include __DIR__ . '/../views/cupons/lista.php';
 }
