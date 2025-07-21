@@ -32,6 +32,7 @@
       <a href="#" class="btn btn-secondary ml-2" onclick="document.getElementById('filtrar').style.display = 'none';">Fechar</a>
     </form>
   </div>
+  <?php if (count($pedidos)){?>
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -70,5 +71,9 @@
       <?php endforeach; ?>
     </tbody>
   </table>
+  <?php } 
+  else{
+   ?><br><br><div style="text-align:center"><div class="alert alert-warning">Sem nenhum registro encontrado!</div></div><?php 
+  }?>
 </div>
 <?php include __DIR__ . '/../layout/footer.php'; ?>
