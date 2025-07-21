@@ -27,7 +27,7 @@ Funcionalidades implementadas:
 
     Cabeçalho de navegação e rodapé com link para um modal de apresentação pessoal
 
-No rodapé do sistema, ao clicar em Henrique Marcandier, um modal é exibido com informações sobre mim, incluindo foto, breve apresentação e links de contato (e-mail, telefone e WhatsApp).
+No rodapé do sistema, ao clicar em Henrique Marcandier, um modal é exibido com informações sobre mim, incluindo foto, breve apresentação e links de contato (e-mail, telefone, WhatsApp, Facebook e Instagram).
 
 Esse foi um projeto muito legal de construir, feito com atenção aos detalhes, testes em todas as rotas e foco em entregar exatamente o que foi solicitado — e um pouco mais.
 

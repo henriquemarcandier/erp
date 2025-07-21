@@ -27,7 +27,10 @@
             <p>Se quiser me conhecer melhor, acompanhar meu progresso ou colaborar, sinta-se à vontade para entrar em contato. Estou aberto a novas oportunidades e projetos!</p>
             <p><a href="mailto:henrique.marcandier@gmail.com"><i class="bi bi-envelope" title="Enviar Email para henrique.marcandier@gmail.com"></i></a> 
             <a href="tel:+5531998466628"><i class="bi bi-telephone" title="Ligar para (31) 99846-6628"></i></a>
-            <a href="https://api.whatsapp.com/send?l=pt&phone=5531998466628" target="_blank"><i class="bi bi-whatsapp" title="Entrar em contato via whatsapp (31) 99846-6628"></i></a></p>
+            <a href="https://api.whatsapp.com/send?l=pt&phone=5531998466628" target="_blank"><i class="bi bi-whatsapp" title="Entrar em contato via whatsapp (31) 99846-6628"></i></a>
+            <a href="https://www.facebook.com/henrique.marcandie" target="_blank"><i class="bi bi-facebook" title="Entrar no Facebook do Henrique"></i></a>
+            <a href="https://www.instagram.com/henriquemarcandier/" target="_blank"><i class="bi bi-instagram" title="Entrar no Instagram do Henrique"></i></a>
+          </p>
           </div>
         </div>
       </div>
