@@ -183,7 +183,11 @@ function excluirPedido() {
 
     // Excluir o pedido
     $conn->query("DELETE FROM pedidos WHERE id = $id");
-
-    header("Location: ?url=pedidos");
+    ?>
+    <script>
+        alert('Pedido excluído com sucesso!');
+        location.href="?url=pedidos";
+    </script>
+    <?php
 }
 ?>

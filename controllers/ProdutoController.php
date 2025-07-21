@@ -85,7 +85,11 @@ function excluirProduto() {
 
     // Excluir o produto
     $conn->query("DELETE FROM produtos WHERE id = $id");
-
-    header("Location: ?url=produtos");
+    ?>
+    <script>
+        alert('Produto excluído com sucesso!');
+        location.href="?url=produtos";
+    </script>
+    <?php
 }
 ?>

@@ -45,7 +45,12 @@ function deletarCupom() {
     global $conn;
     $id = intval($_GET['id']);
     $conn->query("DELETE FROM cupons WHERE id = $id");
-    header("Location: ?url=cupons");
+    ?>
+    <script>
+        alert('Cupom excluído com sucesso!');
+        location.href="?url=cupons";
+    </script>
+    <?php
 }
 
 function editarCupom() {
