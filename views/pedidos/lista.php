@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/../layout/header.php'; ?>
 <div class="container mt-4">
   <h3>Pedidos</h3>
-  <a href="#" class="btn btn-primary mb-3" onclick="if (document.getElementById('filtrar').style.display == 'none'){ document.getElementById('filtrar').style.display='block'; } else{ document.getElementById('filtrar').style.display='none'; }">Filtrar</a>
+  <a href="#" class="btn btn-success mb-3" onclick="if (document.getElementById('filtrar').style.display == 'none'){ document.getElementById('filtrar').style.display='block'; } else{ document.getElementById('filtrar').style.display='none'; }">Filtrar</a>
   <div id="filtrar" style="display: none;">
     <form action="?url=pedidos" method="get" class="form-inline mb-3">
       <input type="hidden" name="url" value="pedidos">
@@ -29,7 +29,7 @@
         <input type="date" name="data_final" id="data_final" class="form-control ml-2" value="<?= isset($_GET['data_final']) ? htmlspecialchars($_GET['data_final']) : '' ?>">
       </div>
       <button type="submit" class="btn btn-primary">Filtrar</button>
-      <a href="?url=pedido/listar" class="btn btn-secondary ml-2">Fechar</a>
+      <a href="#" class="btn btn-secondary ml-2" onclick="document.getElementById('filtrar').style.display = 'none';">Fechar</a>
     </form>
   </div>
   <table class="table table-bordered">

@@ -15,7 +15,7 @@
         <input type="number" step="0.01" name="preco" id="preco" class="form-control ml-2" value="<?= isset($_GET['preco']) ? htmlspecialchars($_GET['preco']) : '' ?>">
       </div>
       <button type="submit" class="btn btn-primary">Filtrar</button>
-      <a href="?url=produtos/listar" class="btn btn-secondary ml-2">Fechar</a>
+      <a href="#" class="btn btn-secondary ml-2" onclick="document.getElementById('filtrar').style.display = 'none';">Fechar</a>
     </form>
   </div>
   <table class="table table-bordered">

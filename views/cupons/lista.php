@@ -15,7 +15,7 @@
         <input type="date" name="validade" id="validade" class="form-control ml-2" value="<?= isset($_GET['validade']) ? htmlspecialchars($_GET['validade']) : '' ?>">
       </div>
       <button type="submit" class="btn btn-primary">Filtrar</button>
-      <a href="?url=cupons" class="btn btn-secondary ml-2">Fechar</a>
+      <a href="#" class="btn btn-secondary ml-2" onclick="document.getElementById('filtrar').style.display = 'none';">Fechar</a>
     </form>
   </div>
   <table class="table table-bordered">
