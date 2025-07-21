@@ -7,6 +7,7 @@ O sistema contempla múltiplas telas funcionais, incluindo: Produtos (página in
 
 Na raiz do projeto há um arquivo 'teste.sql' com o banco de dados. Basta importá-lo e configurar corretamente o arquivo config/database.php para começar os testes.
 Funcionalidades implementadas:
+    Filtro por tela para facilitar a navegação e gerenciamento de dados
 
     Cadastro, edição e exclusão de produtos com variações e controle de estoque por variação
 
